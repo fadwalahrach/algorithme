@@ -1,0 +1,30 @@
+ALGORITHM sentence_algo
+
+VAR
+    nbChar, nbWords, nbVowels: INTEGER :=0;
+    sentence: CHAR;
+
+BEGIN
+
+    Read(sentence);
+
+    WHILE (sentence[nbChar] <> ".") DO
+
+        SWITCH(sentence[nbChar]) DO
+            case " " : nbWords := nbWords + 1; BREAK;
+            case "a" : nbVowels := nbVowels +1; BREAK;
+            case "e" : nbVowels := nbVowels +1; BREAK;
+            case "i" : nbVowels := nbVowels +1; BREAK;
+            case "o" : nbVowels := nbVowels +1; BREAK;
+            case "u" : nbVowels := nbVowels +1; BREAK;
+            case "y" : nbVowels := nbVowels +1; BREAK;
+        END_SWITCH
+
+        nbChar := nbChar + 1;
+
+    END_WHILE
+
+    Write ('The length of the sentence equals', nbChar);
+    Write ('The number of words in the sentence equals', nbWords);
+    Write ('The number of vowels in the sentence equals', nbVowels);
+END
